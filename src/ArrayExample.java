@@ -27,7 +27,14 @@ public class ArrayExample {
 
 
 //        System.out.println(arr[1]);
-
+        int arr2[] = new int[3];
+        arr2[0] = 10;
+        arr2[1] = 20;
+        arr2[2] = 30;
+        //arr[3] = 40;//array index out of bound exception
+        for(int i=0;i<3;i++){
+            System.out.print(arr2[i]+" ");
+        }
 
     }
 }
