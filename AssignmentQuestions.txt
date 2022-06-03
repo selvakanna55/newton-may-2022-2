@@ -1,0 +1,6 @@
+Array - 03/06/2022
+https://practice.geeksforgeeks.org/problems/peak-element/1
+https://practice.geeksforgeeks.org/problems/reverse-an-array/0#
+https://practice.geeksforgeeks.org/problems/find-the-frequency/1
+https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
+https://practice.geeksforgeeks.org/problems/move-all-negative-elements-to-end1813/1
