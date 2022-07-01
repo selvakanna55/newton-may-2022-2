@@ -42,11 +42,12 @@ public class SetExample {
         lhs.add(30);
         System.out.println(lhs);
 
+        //System.out.println(lhs[0]);
 
-
-
-
-
+        //for each i
+        for(int num:lhs){
+            System.out.print(num+" ");
+        }
 
 
     }

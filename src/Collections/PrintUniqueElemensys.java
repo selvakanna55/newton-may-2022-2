@@ -1,7 +1,5 @@
 package Collections;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -17,9 +15,6 @@ public class PrintUniqueElemensys {
         System.out.println(ts);
     }
 }
-
-
-
 
 
 //
