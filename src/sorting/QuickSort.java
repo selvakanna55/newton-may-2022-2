@@ -8,7 +8,7 @@ public class QuickSort {
     }
 
     public static int partition(int arr[], int l, int r) {
-        int pivotVal = arr[r];
+        int pivotVal = arr[r]; //any random element between l and r
         int i = l;
         for (int j = l; j < r; j++) {
             if (arr[j] < pivotVal) {
@@ -19,7 +19,6 @@ public class QuickSort {
         swap(arr, i, r);
         return i;
     }
-
     public static void quickSort(int arr[], int l, int r) {
         if (l < r) {
             int pivotIndex = partition(arr, l, r);
@@ -29,7 +28,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int arr[] = {25, -7, 4, 18, 10};
+        int arr[] = {8,3,7,1,6};
         int n = arr.length;
         for (int num : arr) {
             System.out.print(num + " ");
