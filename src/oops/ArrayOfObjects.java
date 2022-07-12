@@ -9,7 +9,7 @@ class CollegeStudent{
     }
 
 }
-public class ArrayOfObects {
+ class ArrayOfObects {
     public static void main(String[] args) {
         CollegeStudent st1 = new CollegeStudent(10, "ab");
         CollegeStudent st2 = new CollegeStudent(11, "abc");
