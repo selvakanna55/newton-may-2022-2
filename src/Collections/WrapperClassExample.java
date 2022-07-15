@@ -4,7 +4,9 @@ public class WrapperClassExample {
     public static void main(String[] args) {
         int a = 10; // primitive
         Integer aa = new Integer(10); // object oriented - class
-        Integer num = 20;
+        int y = 20;
+        Integer num = y; //boxing
+        int x = num; //unboxing
         System.out.println(aa);
         System.out.println(num);
 
