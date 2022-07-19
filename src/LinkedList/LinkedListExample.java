@@ -1,8 +1,11 @@
 package LinkedList;
 
+import java.util.LinkedList;
+
 class Node {
     int value;
     Node next; //next node, next pointer\
+
     Node(int nodeValue) {
         value = nodeValue;
     }
@@ -37,14 +40,47 @@ public class LinkedListExample {
             }
             run.next = temp;
         }
+    }
 
+    static void insertAtPos(int pos, int val) {
+        //pos is valid? how find invalid, len
+        Node temp = new Node(val);
+        if (pos == 1) {
+            temp.next = head;
+            head = temp;
+        } else {
+            Node run = head;
+            // stand position before node
+            for (int i = 2; i <= pos - 1; i++) {
+                run = run.next;
+            }
+            temp.next = run.next;
+            run.next = temp;
+        }
+    }
+
+    static void deletePos(int pos) {
+        // pos is valid
+        if (pos == 1) {
+            head = head.next;
+        } else {
+            Node run = head;
+            // stand position before node
+            for (int i = 2; i <= pos - 1; i++) {
+                run = run.next;
+            }
+            run.next = run.next.next;
+        }
     }
 
     public static void main(String[] args) {
-        insertAtEnd(10);
-        insertAtEnd(20);
-        insertAtEnd(30);
-        insertAtEnd(40);
+        insertAtPos(1, 10);
+        insertAtPos(2, 20);
+        //insert in middle
+        insertAtPos(2, 30);
         printLL();
+        deletePos(2); //delete 9
+        printLL();
+        LinkedList<Integer> li= new LinkedList<>();
     }
 }
