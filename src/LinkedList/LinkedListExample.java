@@ -54,6 +54,8 @@ public class LinkedListExample {
             for (int i = 2; i <= pos - 1; i++) {
                 run = run.next;
             }
+            //temp.next is pointing to next element of run
+            //
             temp.next = run.next;
             run.next = temp;
         }
