@@ -37,11 +37,32 @@ public class DoublyLinkedList {
         System.out.println();
     }
 
+    static void insertAtPos(int pos, int val) {
+        //pos is valid? how find invalid, len
+        NodeDLL temp = new NodeDLL(val);
+        if (pos == 1) {
+            temp.next = head;
+            head = temp;
+            //
+        } else {
+            NodeDLL run = head;
+            for (int i = 2; i <= pos - 1; i++) {
+                run = run.next;
+            }
+            temp.next = run.next;
+            run.next = temp;
+            temp.prev = run;
+            if (temp.next != null) {
+                temp.next.prev = temp;
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        insertAtEnd(10);
-        insertAtEnd(20);
-        insertAtEnd(30);
-        insertAtEnd(40);
+        insertAtPos(1, 10);
+        insertAtPos(2, 20);
+        insertAtPos(3, 30);
+        insertAtPos(3, 40);
         printLL();
     }
 }
