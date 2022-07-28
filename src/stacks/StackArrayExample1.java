@@ -26,6 +26,7 @@ class ArrayStack {
         if (top == -1) {
             System.out.println("Stack is empty");
         } else {
+            stack[top] = 0;
             top--;
         }
     }
@@ -41,11 +42,9 @@ class ArrayStack {
 public class StackArrayExample1 {
 
     public static void main(String[] args) {
-//        ArrayStack stack = new ArrayStack(3);
-        Stack<Integer> stack = new Stack<>();
-
-//        System.out.println(stack.peek()); // 20
-//        stack.pop(); // stack is empty
+        ArrayStack stack = new ArrayStack(3);
+        System.out.println(stack.peek()); // 20
+        stack.pop(); // stack is empty
         stack.push(10);
         stack.push(20);
         stack.push(30);
