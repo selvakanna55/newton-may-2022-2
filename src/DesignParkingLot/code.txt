@@ -1,0 +1,115 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class DesignParkingLot.ParkingLotSystem {
+    HashMap<DesignParkingLot.VehicleType, Floor> vehicleFloorMapping;
+
+}
+
+class Person { //parent
+    String name;
+    char gender;
+    int age;
+    int mobileNo;
+
+    public Person(String name, char gender, int age, int mobileNo) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.mobileNo = mobileNo;
+    }
+
+
+}
+
+class Employee extends Person { // child
+    int empId;
+    EmployeeType empType;
+
+    public Employee(String name, char gender, int age, int mobileNo, int empId, EmployeeType empType) {
+        super(name, gender, age, mobileNo);
+        this.empId = empId;
+        this.empType = empType;
+    }
+}
+
+class DesignParkingLot.Vehicle {
+    String number;
+    DesignParkingLot.VehicleType vehicleType;
+    String color;
+    String brand;
+    String model;
+}
+
+class Customer extends Person {
+    HashMap<String, DesignParkingLot.Vehicle> vehicles;
+
+    //{'UP01AA1234':v1, 'MH44BB9988' v2}
+    //vehicleNo
+    public Customer(String name, char gender, int age, int mobileNo) {
+        super(name, gender, age, mobileNo);
+    }
+}
+
+class DesignParkingLot.Gate {
+    Employee security;
+
+    DesignParkingLot.Gate(Employee security) {
+        this.security = security;
+    }
+
+}
+
+class DesignParkingLot.Ticket {
+    int ticketNo;
+    Floor floorNo;
+
+    public DesignParkingLot.Ticket(int ticketNo, Floor floorNo, String entryTime) {
+        this.ticketNo = ticketNo;
+        this.floorNo = floorNo;
+        this.entryTime = entryTime;
+    }
+
+    String entryTime;
+
+}
+
+class DesignParkingLot.EntryGate extends DesignParkingLot.Gate {
+    static int ticketNo = 1;
+
+    DesignParkingLot.EntryGate(Employee security) {
+        super(security);
+    }
+
+    DesignParkingLot.Ticket issueTicket(DesignParkingLot.Vehicle v, HashMap<DesignParkingLot.VehicleType, Floor> vehicleFloorMapping) {
+        //find right floor for vehicle
+        Floor f = vehicleFloorMapping.get(v.vehicleType);
+        DesignParkingLot.Ticket t1 = new DesignParkingLot.Ticket(ticketNo, f, "10:30");
+        ticketNo++;
+        return t1;
+    }
+}
+
+enum DesignParkingLot.VehicleType {
+    TRUCK, CAR, BIKE
+}
+
+enum EmployeeType {
+    Security, SystemOperator, Clerk, CleaningPerson
+}
+
+
+class Floor {
+    int totalNoOfSlots;
+    int currentlyOccupiedSlots;
+
+    Floor(int totalNoOfSlots, int currentlyOccupied) {
+        this.totalNoOfSlots = totalNoOfSlots;
+        this.currentlyOccupiedSlots = currentlyOccupied;
+    }
+
+    void disply() {
+        System.out.println("Total no of available slots:" + (totalNoOfSlots - currentlyOccupiedSlots));
+    }
+}
