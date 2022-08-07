@@ -1,0 +1,31 @@
+Linked List:
+Reverse a LinkedList - done
+Find the middle of LinkedList https://leetcode.com/problems/middle-of-the-linked-list/submissions/
+Merge two sorted Linked List  https://leetcode.com/problems/merge-two-sorted-lists/
+Remove N-th node from end of LinkedList
+Add two numbers as LinkedList
+Delete a given Node when a node is given
+Find intersection point of Y LinkedList
+Detect a cycle in Linked List
+Reverse a LinkedList in groups of size k.
+Check if a LinkedList is palindrome or not.
+Find the starting point of the Loop of LinkedList
+Flattening of a LinkedList
+Rotate a LinkedList
+Clone a Linked List with random and next pointer
+
+Stacks & Queues:
+Implement Stack Using Arrays
+Implement Queue Using Arrays
+Implement Stack using Queue
+Implement Queue using Stack
+Check for balanced parentheses
+Next Greater Element
+Next Smaller Element
+Largest rectangle in a histogram
+Sort a Stack
+Sliding Window maximum
+Implement Min Stack
+Find the maximum of minimums of every window size
+Online Stock Span
+The Celebrity Problem
