@@ -1,6 +1,6 @@
 package oops2;
 
-class Phone {
+class Phone { // parent
     void call() {
         System.out.println("calling to abcd");
     }
@@ -10,14 +10,13 @@ class Phone {
     }
 }
 
-class AndroidPhone extends Phone {
+class AndroidPhone extends Phone { //child
 
     void browseSomePage() {
         System.out.println("browser is phone");
     }
 
     void call() {
-        super.call(); //call parent
         System.out.println("call is disconnected in android phone");
     }
 
@@ -31,3 +30,8 @@ public class Overriding {
         ap.message();
     }
 }
+
+
+////overloading vs overrding
+//overloading -> same function name, with different parameters
+//overriding -> same function, same name, same parameters in the any of the child class (only when inheritance)
