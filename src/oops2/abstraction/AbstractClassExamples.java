@@ -5,7 +5,7 @@ abstract class Animal { // dont allow to create object for Animal
         System.out.println("Animal is walking");
     }
 
-    abstract void sound();  // every child class should have sound fun, i.e implementing
+    abstract void sound(); // every child class should have sound fun, i.e implementing
 }
 
 class Lion extends Animal {
